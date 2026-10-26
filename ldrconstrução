@@ -1,0 +1,1770 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LDR Construção | Tudo para sua obra</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --roxo: #51218a;
+  --roxo-escuro: #32105f;
+  --laranja: #ff7a1a;
+  --branco: #ffffff;
+  --fundo: #f8f6fb;
+  --texto: #282331;
+  --cinza: #77717f;
+  --borda: #e9e2f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--texto);
+  background: var(--branco);
+}
+
+button, input {
+  font: inherit;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+}
+
+.linha-topo {
+  background: var(--roxo-escuro);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.linha-topo span {
+  color: #ffad70;
+  font-weight: 700;
+}
+
+/* CABEÇALHO */
+
+header {
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 4px 20px #32105f12;
+}
+
+.cabecalho {
+  max-width: 1250px;
+  margin: auto;
+  padding: 18px 25px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 235px;
+}
+
+.logo-simbolo {
+  background: var(--roxo);
+  color: white;
+  border: 3px solid var(--laranja);
+  border-radius: 12px;
+  padding: 11px 7px;
+  font-weight: 900;
+  font-size: 17px;
+}
+
+.logo h2 {
+  font: 900 23px Montserrat, sans-serif;
+  color: var(--roxo);
+  letter-spacing: -1px;
+}
+
+.logo h2 span {
+  color: var(--laranja);
+}
+
+.logo small {
+  display: block;
+  color: var(--cinza);
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin-top: 4px;
+}
+
+.busca {
+  display: flex;
+  flex: 1;
+  max-width: 570px;
+}
+
+.busca input {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid var(--borda);
+  border-radius: 9px 0 0 9px;
+  outline: none;
+}
+
+.busca input:focus {
+  border-color: var(--roxo);
+}
+
+.busca button {
+  background: var(--laranja);
+  color: white;
+  padding: 0 20px;
+  border-radius: 0 9px 9px 0;
+  font-size: 20px;
+}
+
+.acoes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+.botao-acao {
+  background: white;
+  color: var(--roxo);
+  padding: 9px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.contador {
+  display: inline-grid;
+  place-items: center;
+  background: var(--laranja);
+  color: white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+nav {
+  border-top: 1px solid var(--borda);
+}
+
+.menu-navegacao {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  min-height: 50px;
+}
+
+.menu-navegacao a,
+.menu-navegacao button {
+  color: var(--roxo);
+  background: transparent;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.menu-navegacao a:hover,
+.menu-navegacao button:hover {
+  color: var(--laranja);
+}
+
+.menu-departamentos {
+  color: var(--laranja) !important;
+}
+
+/* BANNER PRINCIPAL */
+
+.banner {
+  background: linear-gradient(115deg, #32105f, #51218a 65%, #7042a3);
+  color: white;
+  overflow: hidden;
+}
+
+.banner-conteudo {
+  max-width: 1250px;
+  min-height: 410px;
+  margin: auto;
+  padding: 50px 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.etiqueta {
+  display: inline-block;
+  color: #ffc18e;
+  border: 1px solid #ffffff35;
+  padding: 9px 14px;
+  border-radius: 30px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.banner h1 {
+  font: 900 clamp(38px, 4.5vw, 61px)/1.08 Montserrat, sans-serif;
+  letter-spacing: -2px;
+  margin: 22px 0;
+}
+
+.banner h1 span {
+  color: #ff9b4a;
+}
+
+.banner p {
+  color: #e9dff2;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 470px;
+  margin-bottom: 25px;
+}
+
+.botao {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: .2s;
+}
+
+.botao-laranja {
+  background: var(--laranja);
+  color: white;
+}
+
+.botao-laranja:hover {
+  background: #e96300;
+  transform: translateY(-2px);
+}
+
+.botao-contorno {
+  border: 1px solid #ffffff80;
+  color: white;
+  margin-left: 8px;
+}
+
+.banner-foto {
+  position: relative;
+  height: 315px;
+  border: 5px solid #ffffff20;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.banner-foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.foto-legenda {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  right: 15px;
+  background: white;
+  color: var(--roxo);
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+/* BENEFÍCIOS */
+
+.beneficios {
+  max-width: 1250px;
+  margin: auto;
+  padding: 22px 25px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.beneficio {
+  border: 1px solid var(--borda);
+  border-radius: 12px;
+  padding: 17px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.beneficio-icone {
+  background: #f1e7fc;
+  color: var(--roxo);
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+.beneficio strong {
+  display: block;
+  font-size: 12px;
+}
+
+.beneficio small {
+  display: block;
+  color: var(--cinza);
+  margin-top: 4px;
+  font-size: 10px;
+}
+
+/* SEÇÕES */
+
+.secao {
+  max-width: 1250px;
+  margin: auto;
+  padding: 42px 25px;
+}
+
+.subtitulo {
+  color: var(--laranja);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.titulo-secao {
+  color: var(--roxo-escuro);
+  font: 800 27px Montserrat, sans-serif;
+}
+
+.descricao-secao {
+  color: var(--cinza);
+  font-size: 13px;
+  margin-top: 9px;
+  margin-bottom: 24px;
+}
+
+/* CATEGORIAS */
+
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+.categoria {
+  background: white;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  padding: 22px 12px;
+  text-align: center;
+  transition: .2s;
+}
+
+.categoria:hover {
+  transform: translateY(-4px);
+  border-color: var(--roxo);
+  box-shadow: 0 10px 30px #32105f15;
+}
+
+.categoria-icone {
+  width: 60px;
+  height: 60px;
+  background: #f1e7fc;
+  color: var(--roxo);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 14px;
+  font-size: 28px;
+}
+
+.categoria:nth-child(even) .categoria-icone {
+  background: #fff0e5;
+  color: var(--laranja);
+}
+
+.categoria h3 {
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.categoria p {
+  color: var(--cinza);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+/* PROMOÇÃO */
+
+.promocao {
+  max-width: 1200px;
+  margin: 15px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #fff0e5;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.promocao-texto {
+  padding: 38px;
+}
+
+.promocao h2 {
+  color: var(--roxo-escuro);
+  font: 900 30px Montserrat, sans-serif;
+  margin: 14px 0;
+}
+
+.promocao p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #625668;
+  margin-bottom: 20px;
+}
+
+.promocao img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+}
+
+/* PRODUTOS */
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.produto {
+  border: 1px solid var(--borda);
+  border-radius: 13px;
+  overflow: hidden;
+  transition: .2s;
+  background: white;
+}
+
+.produto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px #32105f18;
+}
+
+.produto img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: var(--fundo);
+}
+
+.produto-info {
+  padding: 15px;
+}
+
+.produto-categoria {
+  color: var(--cinza);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.produto h3 {
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+.preco {
+  color: var(--roxo);
+  font: 800 19px Montserrat, sans-serif;
+}
+
+.disponibilidade {
+  display: block;
+  color: #268451;
+  font-size: 10px;
+  margin: 12px 0;
+}
+
+.adicionar {
+  width: 100%;
+  background: var(--roxo);
+  color: white;
+  padding: 11px;
+  border-radius: 7px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.adicionar:hover {
+  background: var(--laranja);
+}
+
+/* GALERIA DE OBRAS */
+
+.galeria {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  gap: 15px;
+}
+
+.obra {
+  height: 235px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 13px;
+}
+
+.obra img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.obra:hover img {
+  transform: scale(1.05);
+}
+
+.obra-legenda {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 15px 15px;
+  color: white;
+  background: linear-gradient(transparent, #211137e8);
+}
+
+.obra-legenda strong {
+  font: 700 14px Montserrat, sans-serif;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  background: var(--roxo);
+  color: white;
+  border-radius: 14px;
+  padding: 28px;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.newsletter h3 {
+  font: 800 19px Montserrat, sans-serif;
+  margin-bottom: 8px;
+}
+
+.newsletter p {
+  color: #e6d9f2;
+  font-size: 12px;
+}
+
+.newsletter form {
+  display: flex;
+  gap: 8px;
+}
+
+.newsletter input {
+  padding: 12px;
+  border: 0;
+  border-radius: 7px;
+  min-width: 190px;
+}
+
+/* RODAPÉ */
+
+footer {
+  background: #211137;
+  color: white;
+  padding: 40px 25px 20px;
+}
+
+.rodape-conteudo {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+footer h3 {
+  color: #ff9b4a;
+  font: 800 17px Montserrat, sans-serif;
+  margin-bottom: 15px;
+}
+
+footer h4 {
+  font: 700 13px Montserrat, sans-serif;
+  margin-bottom: 15px;
+}
+
+footer p, footer a {
+  display: block;
+  color: #d2c4df;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+footer a:hover {
+  color: var(--laranja);
+}
+
+.copyright {
+  text-align: center;
+  border-top: 1px solid #ffffff20;
+  margin-top: 30px;
+  padding-top: 18px;
+  color: #c2b2d1;
+  font-size: 10px;
+}
+
+/* BOTÃO WHATSAPP */
+
+.whatsapp {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  z-index: 20;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: #20c968;
+  color: white;
+  font-size: 25px;
+  box-shadow: 0 6px 25px #0002;
+}
+
+/* POP-UPS */
+
+.fundo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background: #180b2dbb;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fundo-modal.ativo {
+  display: flex;
+}
+
+.modal {
+  background: white;
+  width: 100%;
+  max-width: 460px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 16px;
+  animation: aparecer .2s ease;
+}
+
+.modal-topo {
+  background: var(--roxo);
+  color: white;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-topo h2 {
+  font: 800 19px Montserrat, sans-serif;
+}
+
+.modal-topo p {
+  color: #e6d9f2;
+  font-size: 12px;
+  margin-top: 7px;
+}
+
+.fechar {
+  background: #ffffff20;
+  color: white;
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  font-size: 21px;
+}
+
+.modal-corpo {
+  padding: 24px;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+.campo label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  outline: none;
+}
+
+.campo input:focus {
+  border-color: var(--roxo);
+}
+
+.botao-enviar {
+  width: 100%;
+  padding: 14px;
+  border-radius: 8px;
+  background: var(--laranja);
+  color: white;
+  font-weight: 800;
+}
+
+.aviso {
+  font-size: 10px;
+  color: var(--cinza);
+  line-height: 1.6;
+  margin-top: 13px;
+}
+
+/* DEPARTAMENTOS DO POP-UP */
+
+.lista-departamentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.item-departamento {
+  border: 1px solid var(--borda);
+  border-radius: 10px;
+  padding: 15px;
+  background: white;
+  text-align: left;
+  color: var(--roxo);
+}
+
+.item-departamento:hover {
+  background: #f7f0ff;
+  border-color: var(--roxo);
+}
+
+.item-departamento strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.item-departamento small {
+  color: var(--cinza);
+  font-size: 10px;
+}
+
+.mensagem {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 100;
+  background: #211137;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 9px;
+  font-size: 12px;
+  transition: .2s;
+  text-align: center;
+}
+
+.mensagem.visivel {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@keyframes aparecer {
+  from {opacity: 0; transform: translateY(10px)}
+  to {opacity: 1; transform: translateY(0)}
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .cabecalho {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .busca {
+    order: 3;
+    flex-basis: 100%;
+    max-width: none;
+  }
+
+  .banner-conteudo {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .beneficios {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .categorias {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .produtos {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .rodape-conteudo {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .promocao {
+    margin: 15px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 14px;
+  }
+
+  .logo {
+    min-width: auto;
+  }
+
+  .logo h2 {
+    font-size: 18px;
+  }
+
+  .logo small {
+    font-size: 7px;
+  }
+
+  .menu-navegacao {
+    padding: 15px;
+    gap: 18px;
+    overflow-x: auto;
+  }
+
+  .menu-navegacao a,
+  .menu-navegacao button {
+    white-space: nowrap;
+    font-size: 11px;
+  }
+
+  .banner-conteudo {
+    grid-template-columns: 1fr;
+    padding: 35px 20px;
+  }
+
+  .banner h1 {
+    font-size: 42px;
+  }
+
+  .banner-foto {
+    height: 230px;
+  }
+
+  .beneficios {
+    padding: 15px;
+    gap: 8px;
+  }
+
+  .beneficio {
+    padding: 10px 7px;
+  }
+
+  .beneficio strong {
+    font-size: 10px;
+  }
+
+  .beneficio small {
+    font-size: 9px;
+  }
+
+  .secao {
+    padding: 32px 16px;
+  }
+
+  .titulo-secao {
+    font-size: 22px;
+  }
+
+  .categorias {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .promocao {
+    grid-template-columns: 1fr;
+    margin: 10px 16px;
+  }
+
+  .promocao-texto {
+    padding: 25px;
+  }
+
+  .promocao img {
+    height: 180px;
+    min-height: auto;
+  }
+
+  .produtos {
+    gap: 10px;
+  }
+
+  .produto img {
+    height: 130px;
+  }
+
+  .produto-info {
+    padding: 10px;
+  }
+
+  .produto h3 {
+    font-size: 12px;
+  }
+
+  .preco {
+    font-size: 15px;
+  }
+
+  .galeria {
+    grid-template-columns: 1fr 1fr;
+    gap: 9px;
+  }
+
+  .obra {
+    height: 165px;
+  }
+
+  .obra:first-child {
+    grid-column: span 2;
+    height: 190px;
+  }
+
+  .newsletter {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 22px;
+  }
+
+  .newsletter form {
+    flex-direction: column;
+  }
+
+  .newsletter input {
+    width: 100%;
+  }
+
+  .rodape-conteudo {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+  }
+
+  .lista-departamentos {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="linha-topo">
+  Sua obra merece o melhor.
+  <span>Consulte nossas condições especiais!</span>
+</div>
+
+<header>
+  <div class="cabecalho">
+
+    <a href="#" class="logo">
+      <div class="logo-simbolo">LDR</div>
+      <div>
+        <h2><span>LDR</span> CONSTRUÇÃO</h2>
+        <small>MATERIAIS PARA SUA OBRA</small>
+      </div>
+    </a>
+
+    <form class="busca" id="formBusca">
+      <input
+        type="search"
+        id="campoBusca"
+        placeholder="Busque produtos, ferramentas e muito mais..."
+        aria-label="Buscar produtos"
+      >
+      <button type="submit" aria-label="Buscar">⌕</button>
+    </form>
+
+    <div class="acoes">
+      <button class="botao-acao" id="abrirCadastro">
+        ♙ Entrar ou cadastrar-se
+      </button>
+
+      <button class="botao-acao" id="abrirCarrinho">
+        🛒 <span class="contador" id="contadorCarrinho">0</span>
+      </button>
+    </div>
+
+  </div>
+
+  <nav>
+    <div class="menu-navegacao">
+      <button class="menu-departamentos" id="abrirDepartamentos">
+        ☰ TODOS OS DEPARTAMENTOS
+      </button>
+      <a href="#categorias">Departamentos</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#obras">Inspire-se</a>
+      <a href="#rodape">Atendimento</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- BANNER PRINCIPAL -->
+
+  <section class="banner">
+    <div class="banner-conteudo">
+
+      <div>
+        <span class="etiqueta">Tudo para construir e renovar</span>
+
+        <h1>
+          O próximo passo da sua obra
+          <span>começa aqui.</span>
+        </h1>
+
+        <p>
+          Materiais de qualidade, ferramentas para todo projeto
+          e soluções práticas para tirar suas ideias do papel.
+        </p>
+
+        <a href="#ofertas" class="botao botao-laranja">
+          Ver ofertas →
+        </a>
+
+        <a href="#categorias" class="botao botao-contorno">
+          Explorar produtos
+        </a>
+      </div>
+
+      <div class="banner-foto">
+        <img
+          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+          alt="Profissionais trabalhando em uma obra"
+        >
+
+        <div class="foto-legenda">
+          Do alicerce ao acabamento: vamos construir!
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+
+  <section class="beneficios">
+
+    <div class="beneficio">
+      <div class="beneficio-icone">✓</div>
+      <div>
+        <strong>Qualidade selecionada</strong>
+        <small>Produtos para sua obra</small>
+      </div>
+    </div>
+
+    <div class="beneficio">
+      <div class="beneficio-icone">⌂</div>
+      <div>
+        <strong>Entrega ou retirada</strong>
+        <small>Consulte as opções</small>
+      </div>
+    </div>
+
+    <div class="beneficio">
+      <div class="beneficio-icone">♡</div>
+      <div>
+        <strong>Atendimento próximo</strong>
+        <small>Ajuda para escolher</small>
+      </div>
+    </div>
+
+    <div class="beneficio">
+      <div class="beneficio-icone">▣</div>
+      <div>
+        <strong>Compra descomplicada</strong>
+        <small>Praticidade para você</small>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- DEPARTAMENTOS -->
+
+  <section class="secao" id="categorias">
+
+    <div class="subtitulo">Encontre com facilidade</div>
+    <h2 class="titulo-secao">O que sua obra precisa?</h2>
+    <p class="descricao-secao">
+      Explore nossos principais departamentos.
+    </p>
+
+    <div class="categorias">
+
+      <button class="categoria" data-categoria="Materiais básicos">
+        <div class="categoria-icone">▰</div>
+        <h3>Materiais básicos</h3>
+        <p>Cimento, areia, tijolos e blocos</p>
+      </button>
+
+      <button class="categoria" data-categoria="Ferramentas">
+        <div class="categoria-icone">🔧</div>
+        <h3>Ferramentas</h3>
+        <p>Equipamentos para cada tarefa</p>
+      </button>
+
+      <button class="categoria" data-categoria="Elétrica e iluminação">
+        <div class="categoria-icone">ϟ</div>
+        <h3>Elétrica e iluminação</h3>
+        <p>Fios, tomadas e lâmpadas</p>
+      </button>
+
+      <button class="categoria" data-categoria="Hidráulica">
+        <div class="categoria-icone">♧</div>
+        <h3>Hidráulica</h3>
+        <p>Tubos, conexões e registros</p>
+      </button>
+
+      <button class="categoria" data-categoria="Acabamentos">
+        <div class="categoria-icone">▦</div>
+        <h3>Acabamentos</h3>
+        <p>Pisos, tintas e revestimentos</p>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- OFERTAS -->
+
+  <section class="promocao" id="ofertas">
+
+    <div class="promocao-texto">
+      <div class="subtitulo">Especial para você</div>
+
+      <h2>Seu projeto em boas mãos.</h2>
+
+      <p>
+        Está reformando, construindo ou dando aquele acabamento final?
+        Confira nossa seleção de produtos e planeje sua obra com
+        mais praticidade.
+      </p>
+
+      <a href="#produtos" class="botao botao-laranja">
+        Conferir produtos →
+      </a>
+    </div>
+
+    <img
+      src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=85"
+      alt="Equipe trabalhando em uma construção"
+    >
+
+  </section>
+
+  <!-- PRODUTOS -->
+
+  <section class="secao" id="produtos">
+
+    <div class="subtitulo">Seleção LDR</div>
+    <h2 class="titulo-secao">Produtos em destaque</h2>
+    <p class="descricao-secao">
+      Conheça alguns dos produtos disponíveis em nossa loja demonstrativa.
+    </p>
+
+    <div class="produtos" id="listaProdutos">
+
+      <article class="produto"
+        data-nome="cimento construção material básico">
+
+        <img
+          src="https://images.unsplash.com/photo-1513467655676-561b7d489a88?auto=format&fit=crop&w=600&q=80"
+          alt="Materiais de construção"
+        >
+
+        <div class="produto-info">
+          <span class="produto-categoria">Materiais básicos</span>
+          <h3>Cimento para construção</h3>
+          <div class="preco">Consulte o preço</div>
+          <span class="disponibilidade">● Consulte disponibilidade</span>
+          <button class="adicionar" data-produto="Cimento para construção">
+            Tenho interesse
+          </button>
+        </div>
+      </article>
+
+      <article class="produto"
+        data-nome="ferramentas furadeira equipamento">
+
+        <img
+          src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=600&q=80"
+          alt="Ferramentas para construção"
+        >
+
+        <div class="produto-info">
+          <span class="produto-categoria">Ferramentas</span>
+          <h3>Ferramentas para sua obra</h3>
+          <div class="preco">Consulte o preço</div>
+          <span class="disponibilidade">● Consulte disponibilidade</span>
+          <button class="adicionar" data-produto="Ferramentas para sua obra">
+            Tenho interesse
+          </button>
+        </div>
+      </article>
+
+      <article class="produto"
+        data-nome="tinta pintura acabamento">
+
+        <img
+          src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=600&q=80"
+          alt="Pintura e acabamento"
+        >
+
+        <div class="produto-info">
+          <span class="produto-categoria">Pintura</span>
+          <h3>Tintas e acessórios</h3>
+          <div class="preco">Consulte o preço</div>
+          <span class="disponibilidade">● Consulte disponibilidade</span>
+          <button class="adicionar" data-produto="Tintas e acessórios">
+            Tenho interesse
+          </button>
+        </div>
+      </article>
+
+      <article class="produto"
+        data-nome="hidráulica tubos encanamento conexões">
+
+        <img
+          src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=600&q=80"
+          alt="Materiais hidráulicos"
+        >
+
+        <div class="produto-info">
+          <span class="produto-categoria">Hidráulica</span>
+          <h3>Materiais hidráulicos</h3>
+          <div class="preco">Consulte o preço</div>
+          <span class="disponibilidade">● Consulte disponibilidade</span>
+          <button class="adicionar" data-produto="Materiais hidráulicos">
+            Tenho interesse
+          </button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- GALERIA DE OBRAS -->
+
+  <section class="secao" id="obras">
+
+    <div class="subtitulo">Inspire seu projeto</div>
+    <h2 class="titulo-secao">Ideias que saem do papel</h2>
+    <p class="descricao-secao">
+      Inspirações para construir, renovar e transformar ambientes.
+    </p>
+
+    <div class="galeria">
+
+      <div class="obra">
+        <img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&q=85"
+          alt="Casa moderna"
+        >
+        <div class="obra-legenda">
+          <strong>Construção do zero</strong>
+        </div>
+      </div>
+
+      <div class="obra">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85"
+          alt="Sala reformada"
+        >
+        <div class="obra-legenda">
+          <strong>Reforma de ambientes</strong>
+        </div>
+      </div>
+
+      <div class="obra">
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85"
+          alt="Ambiente com acabamento moderno"
+        >
+        <div class="obra-legenda">
+          <strong>Acabamentos</strong>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="newsletter">
+      <div>
+        <h3>Receba novidades da LDR</h3>
+        <p>Cadastre seu e-mail para receber dicas e novidades.</p>
+      </div>
+
+      <form id="formNewsletter">
+        <input type="email" placeholder="Seu melhor e-mail" required>
+        <button class="botao botao-laranja" type="submit">
+          Quero receber
+        </button>
+      </form>
+    </div>
+
+  </section>
+
+</main>
+
+<!-- RODAPÉ -->
+
+<footer id="rodape">
+
+  <div class="rodape-conteudo">
+
+    <div>
+      <h3>LDR CONSTRUÇÃO</h3>
+      <p>
+        Soluções para construir, reformar e transformar.
+        Conte com a LDR para planejar os próximos passos do seu projeto.
+      </p>
+    </div>
+
+    <div>
+      <h4>Departamentos</h4>
+      <a href="#categorias">Materiais básicos</a>
+      <a href="#categorias">Ferramentas</a>
+      <a href="#categorias">Elétrica</a>
+      <a href="#categorias">Hidráulica</a>
+      <a href="#categorias">Acabamentos</a>
+    </div>
+
+    <div>
+      <h4>Atendimento</h4>
+      <a href="#" id="contatoRodape">Fale conosco</a>
+      <a href="#" id="cadastroRodape">Entrar / cadastrar</a>
+      <a href="#ofertas">Ofertas</a>
+      <a href="#obras">Inspire-se</a>
+    </div>
+
+    <div>
+      <h4>Informações</h4>
+      <p>Consulte a disponibilidade dos produtos, os preços e as condições de entrega.</p>
+      <p>Loja fictícia para demonstração.</p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 LDR Construção — Todos os direitos reservados.
+  </div>
+
+</footer>
+
+<button class="whatsapp" id="botaoWhatsApp" aria-label="Contato">
+  ☎
+</button>
+
+<!-- POP-UP DE CADASTRO -->
+
+<div class="fundo-modal" id="modalCadastro">
+  <div class="modal">
+
+    <div class="modal-topo">
+      <div>
+        <h2>Entre ou cadastre-se</h2>
+        <p>Informe seus dados para continuar.</p>
+      </div>
+
+      <button class="fechar" data-fechar>×</button>
+    </div>
+
+    <form class="modal-corpo" id="formCadastro">
+
+      <div class="campo">
+        <label for="nome">Nome completo</label>
+        <input
+          id="nome"
+          type="text"
+          placeholder="Digite seu nome"
+          minlength="2"
+          required
+        >
+      </div>
+
+      <div class="campo">
+        <label for="cep">CEP</label>
+        <input
+          id="cep"
+          type="text"
+          placeholder="00000-000"
+          inputmode="numeric"
+          maxlength="9"
+          required
+        >
+      </div>
+
+      <div class="campo">
+        <label for="telefone">Telefone / WhatsApp</label>
+        <input
+          id="telefone"
+          type="tel"
+          placeholder="(00) 00000-0000"
+          inputmode="tel"
+          required
+        >
+      </div>
+
+      <button type="submit" class="botao-enviar">
+        Continuar cadastro →
+      </button>
+
+      <p class="aviso">
+        Este é um formulário demonstrativo. Os dados não são enviados
+        para um servidor nem ficam salvos após o fechamento da página.
+      </p>
+
+    </form>
+  </div>
+</div>
+
+<!-- POP-UP DOS DEPARTAMENTOS -->
+
+<div class="fundo-modal" id="modalDepartamentos">
+  <div class="modal">
+
+    <div class="modal-topo">
+      <div>
+        <h2>Todos os departamentos</h2>
+        <p>Escolha uma área para explorar.</p>
+      </div>
+
+      <button class="fechar" data-fechar>×</button>
+    </div>
+
+    <div class="modal-corpo">
+      <div class="lista-departamentos">
+
+        <button class="item-departamento" data-escolha="cimento">
+          <strong>▰ Materiais básicos</strong>
+          <small>Cimento, areia, tijolos e blocos</small>
+        </button>
+
+        <button class="item-departamento" data-escolha="ferramentas">
+          <strong>🔧 Ferramentas</strong>
+          <small>Equipamentos e acessórios</small>
+        </button>
+
+        <button class="item-departamento" data-escolha="elétrica">
+          <strong>ϟ Elétrica e iluminação</strong>
+          <small>Fios, tomadas e lâmpadas</small>
+        </button>
+
+        <button class="item-departamento" data-escolha="hidráulica">
+          <strong>♧ Hidráulica</strong>
+          <small>Tubos, conexões e torneiras</small>
+        </button>
+
+        <button class="item-departamento" data-escolha="acabamento">
+          <strong>▦ Acabamentos</strong>
+          <small>Pisos, tintas e revestimentos</small>
+        </button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mensagem" id="mensagem"></div>
+
+<script>
+// FUNÇÕES BÁSICAS
+
+const selecionar = (seletor) => document.querySelector(seletor);
+const selecionarTodos = (seletor) => document.querySelectorAll(seletor);
+
+let carrinho = [];
+let temporizadorMensagem;
+
+function avisar(texto) {
+  const mensagem = selecionar("#mensagem");
+
+  mensagem.textContent = texto;
+  mensagem.classList.add("visivel");
+
+  clearTimeout(temporizadorMensagem);
+
+  temporizadorMensagem = setTimeout(() => {
+    mensagem.classList.remove("visivel");
+  }, 3000);
+}
+
+// ABRIR E FECHAR POP-UPS
+
+function abrirModal(id) {
+  selecionar(id).classList.add("ativo");
+  document.body.style.overflow = "hidden";
+}
+
+function fecharModal(modal) {
+  modal.classList.remove("ativo");
+
+  if (!selecionar(".fundo-modal.ativo")) {
+    document.body.style.overflow = "";
+  }
+}
+
+selecionar("#abrirCadastro").addEventListener("click", () => {
+  abrirModal("#modalCadastro");
+});
+
+selecionar("#cadastroRodape").addEventListener("click", (evento) => {
+  evento.preventDefault();
+  abrirModal("#modalCadastro");
+});
+
+selecionar("#abrirDepartamentos").addEventListener("click", () => {
+  abrirModal("#modalDepartamentos");
+});
+
+selecionarTodos("[data-fechar]").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    fecharModal(botao.closest(".fundo-modal"));
+  });
+});
+
+selecionarTodos(".fundo-modal").forEach((modal) => {
+  modal.addEventListener("click", (evento) => {
+    if (evento.target === modal) {
+      fecharModal(modal);
+    }
+  });
+});
+
+document.addEventListener("keydown", (evento) => {
+  if (evento.key === "Escape") {
+    selecionarTodos(".fundo-modal.ativo").forEach(fecharModal);
+  }
+});
+
+// FORMATAÇÃO DO CEP
+
+selecionar("#cep").addEventListener("input", (evento) => {
+  let cep = evento.target.value.replace(/\D/g, "").slice(0, 8);
+
+  if (cep.length > 5) {
+    cep = cep.slice(0, 5) + "-" + cep.slice(5);
+  }
+
+  evento.target.value = cep;
+});
+
+// FORMATAÇÃO DO TELEFONE
+
+selecionar("#telefone").addEventListener("input", (evento) => {
+  let numero = evento.target.value.replace(/\D/g, "").slice(0, 11);
+
+  if (numero.length > 10) {
+    numero =
+      "(" + numero.slice(0, 2) + ") " +
+      numero.slice(2, 7) + "-" +
+      numero.slice(7);
+  } else if (numero.length > 6) {
+    numero =
+      "(" + numero.slice(0, 2) + ") " +
+      numero.slice(2, 6) + "-" +
+      numero.slice(6);
+  } else if (numero.length > 2) {
+    numero =
+      "(" + numero.slice(0, 2) + ") " +
+      numero.slice(2);
+  }
+
+  evento.target.value = numero;
+});
+
+// CADASTRO DEMONSTRATIVO
+
+selecionar("#formCadastro").addEventListener("submit", (evento) => {
+  evento.preventDefault();
+
+  const nome = selecionar("#nome").value.trim();
+  const cep = selecionar("#cep").value.replace(/\D/g, "");
+  const telefone = selecionar("#telefone").value.replace(/\D/g, "");
+
+  if (nome.length < 2 || cep.length !== 8 || telefone.length < 10) {
+    avisar("Confira o nome, o CEP e o telefone.");
+    return;
+  }
+
+  fecharModal(selecionar("#modalCadastro"));
+
+  avisar("Formulário preenchido! Nenhum dado foi enviado.");
+
+  evento.target.reset();
+});
+
+// BUSCA DE PRODUTOS
+
+function buscarProdutos(termo) {
+  const pesquisa = termo.trim().toLocaleLowerCase("pt-BR");
+  let encontrados = 0;
+
+  selecionarTodos(".produto").forEach((produto) => {
+    const nome = produto.dataset.nome.toLocaleLowerCase("pt-BR");
+    const texto = produto.innerText.toLocaleLowerCase("pt-BR");
+
+    const corresponde =
+      pesquisa === "" ||
+      nome.includes(pesquisa) ||
+      texto.includes(pesquisa);
+
+    produto.style.display = corresponde ? "" : "none";
+
+    if (corresponde) {
+      encontrados++;
+    }
+  });
+
+  selecionar("#produtos").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  if (pesquisa && encontrados === 0) {
+    avisar("Nenhum produto encontrado. Tente outra palavra.");
+  } else if (pesquisa) {
+    avisar(encontrados + " produto(s) encontrado(s).");
+  }
+}
+
+selecionar("#formBusca").addEventListener("submit", (evento) => {
+  evento.preventDefault();
+  buscarProdutos(selecionar("#campoBusca").value);
+});
+
+// CLIQUE NAS CATEGORIAS
+
+selecionarTodos("[data-categoria]").forEach((categoria) => {
+  categoria.addEventListener("click", () => {
+    const nome = categoria.dataset.categoria;
+    selecionar("#campoBusca").value = nome;
+
+    // Mostra todos os produtos da demonstração para categorias
+    // que ainda não possuem uma lista comercial específica.
+    buscarProdutos(nome);
+  });
+});
+
+// CLIQUE NO MENU DE DEPARTAMENTOS
+
+selecionarTodos("[data-escolha]").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const categoria = botao.dataset.escolha;
+
+    fecharModal(selecionar("#modalDepartamentos"));
+
+    selecionar("#campoBusca").value = categoria;
+    buscarProdutos(categoria);
+  });
+});
+
+// CARRINHO DEMONSTRATIVO
+
+selecionarTodos("[data-produto]").forEach((botao) => {
+  botao.addEventListener("click", () => {
+    const produto = botao.dataset.produto;
+
+    carrinho.push(produto);
+
+    selecionar("#contadorCarrinho").textContent = carrinho.length;
+
+    avisar("Interesse adicionado: " + produto);
+  });
+});
+
+selecionar("#abrirCarrinho").addEventListener("click", () => {
+  if (carrinho.length === 0) {
+    avisar("Você ainda não adicionou produtos.");
+    return;
+  }
+
+  avisar("Produtos: " + carrinho.join(", "));
+});
+
+// FORMULÁRIO DE NOVIDADES
+
+selecionar("#formNewsletter").addEventListener("submit", (evento) => {
+  evento.preventDefault();
+
+  avisar("Cadastro demonstrativo concluído. Nenhum e-mail foi salvo.");
+
+  evento.target.reset();
+});
+
+// CONTATO DEMONSTRATIVO
+
+selecionar("#botaoWhatsApp").addEventListener("click", () => {
+  avisar("Configure aqui o WhatsApp oficial da LDR Construção.");
+});
+
+selecionar("#contatoRodape").addEventListener("click", (evento) => {
+  evento.preventDefault();
+  avisar("Configure o telefone ou WhatsApp oficial da loja.");
+});
+</script>
+
+</body>
+</html>
